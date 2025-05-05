@@ -34,7 +34,7 @@ Elaborar documentación inicial y story mapping.
 
 Crear el diagrama de flujo general del sistema.
 
-Configurar repositorios (Git) y entorno de trabajo (IDE, linters, etc.).
+Configurar repositorios (Git) y entorno de trabajo.
 
 Crear la estructura de carpetas para backend y frontend.
 

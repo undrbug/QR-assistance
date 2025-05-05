@@ -22,3 +22,6 @@ yarn-error.log*
 # Archivos sensibles
 *.pem
 *.key
+
+sql.sql
+sql-querys.mwb

@@ -1,11 +1,12 @@
 {
   "name": "qr-assistence",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
+    "start": "node server.js",
+    "dev": "node --env-file .env --watch ./src/server.js",
+    "initdb": "node src/utils/initDB.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "hGauna",
@@ -16,8 +17,12 @@
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
+    "eslint": "^9.24.0",
+    "exceljs": "^4.4.0",
     "express": "^5.1.0",
     "express-validator": "^7.2.1",
+    "geolib": "^3.3.4",
+    "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.14.0",
     "sequelize": "^6.37.7"

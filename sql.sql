@@ -1,0 +1,37 @@
+create database QR_assistance;
+use QR_assistance;
+select * from docentes;
+select * from clases;
+select * from asistencias;
+describe asistencias;
+describe clases;
+describe docentes;
+
+DELETE FROM `QR_assistance`.`clases` WHERE (`id_clase` = '1');
+SELECT `id_asistencia`, `fecha_hora_asistencia` FROM `asistencias` AS `Asistencia` WHERE `Asistencia`.`id_docente` = 2;
+DELETE FROM `QR_assistance`.`asistencias` WHERE (`id_asistencia` = '1');
+DELETE FROM `QR_assistance`.`asistencias` WHERE (`id_asistencia` = '2');
+DELETE FROM `QR_assistance`.`asistencias` WHERE (`id_asistencia` = '3');
+DELETE FROM `QR_assistance`.`asistencias` WHERE (`id_asistencia` = '4');
+DELETE FROM `QR_assistance`.`asistencias` WHERE (`id_asistencia` = '5');
+DELETE FROM `QR_assistance`.`asistencias` WHERE (`id_asistencia` = '6');
+DELETE FROM `QR_assistance`.`asistencias` WHERE (`id_asistencia` = '7');
+DELETE FROM `QR_assistance`.`asistencias` WHERE (`id_asistencia` = '8');
+DELETE FROM `QR_assistance`.`asistencias` WHERE (`id_asistencia` = '9');
+DELETE FROM `QR_assistance`.`asistencias` WHERE (`id_asistencia` = '10');
+DELETE FROM `QR_assistance`.`asistencias` WHERE (`id_asistencia` = '11');
+DELETE FROM `QR_assistance`.`asistencias` WHERE (`id_asistencia` = '12');
+DELETE FROM `QR_assistance`.`asistencias` WHERE (`id_asistencia` = '13');
+DELETE FROM `QR_assistance`.`asistencias` WHERE (`id_asistencia` = '14');
+DELETE FROM `QR_assistance`.`docentes` WHERE (`id_docente` = '1');
+
+DELETE FROM `QR_assistance`.`clases` WHERE (`id_clase` = '12');
+DELETE FROM `QR_assistance`.`clases` WHERE (`id_clase` = '13');
+DELETE FROM `QR_assistance`.`clases` WHERE (`id_clase` = '14');
+DELETE FROM `QR_assistance`.`clases` WHERE (`id_clase` = '15');
+DELETE FROM `QR_assistance`.`clases` WHERE (`id_clase` = '16');
+DELETE FROM `QR_assistance`.`clases` WHERE (`id_clase` = '17');
+DELETE FROM `QR_assistance`.`clases` WHERE (`id_clase` = '18');
+DELETE FROM `QR_assistance`.`clases` WHERE (`id_clase` = '19');
+DELETE FROM `QR_assistance`.`clases` WHERE (`id_clase` = '20');
+DELETE FROM `QR_assistance`.`clases` WHERE (`id_clase` = '21');

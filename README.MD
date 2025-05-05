@@ -12,12 +12,13 @@ FALTA LA ESTRUCTURA DEL PROYECTO
 ## 🚀 Instalación y Ejecución
 
 ### Backend
-```bash
+
 cd backend
 npm install
 npm run dev
+
 ### Frontend
-```bash
+
 cd frontend
 npm install
 npm run start
@@ -43,14 +44,12 @@ Alumno (no autenticado)
 # Documentación API - Sistema de Asistencia QR
 
 ## Base URL
-`http://localhost:5000/api`
+`http://localhost:3000/api`
 
 ## Autenticación
 La API utiliza autenticación basada en JWT (JSON Web Tokens). Para acceder a los endpoints protegidos, se debe incluir el token en la cabecera de autorización:
 
-```
 Authorization: Bearer <token>
-```
 
 ## Endpoints
 
@@ -61,14 +60,15 @@ Authorization: Bearer <token>
 - **Método**: `POST`
 - **Autenticación**: No requerida
 - **Parámetros de cuerpo**:
-  ```json
+  json
   {
     "usuario": "string",
     "contrasena": "string"
   }
-  ```
+  
+  
 - **Respuesta exitosa**:
-  ```json
+  json
   {
     "message": "Inicio de sesión exitoso",
     "docente": {
@@ -80,7 +80,7 @@ Authorization: Bearer <token>
     },
     "token": "string"
   }
-  ```
+  
 - **Códigos de respuesta**:
   - `200 OK`: Inicio de sesión exitoso
   - `400 Bad Request`: Datos de entrada inválidos
@@ -91,7 +91,7 @@ Authorization: Bearer <token>
 - **Método**: `GET`
 - **Autenticación**: Requerida
 - **Respuesta exitosa**:
-  ```json
+  json
   {
     "message": "Sesión válida",
     "docente": {
@@ -102,7 +102,7 @@ Authorization: Bearer <token>
       "email": "string"
     }
   }
-  ```
+  
 - **Códigos de respuesta**:
   - `200 OK`: Sesión válida
   - `401 Unauthorized`: Token inválido o expirado
@@ -115,7 +115,7 @@ Authorization: Bearer <token>
 - **Método**: `GET`
 - **Autenticación**: Requerida
 - **Respuesta exitosa**:
-  ```json
+  json
   {
     "message": "Docentes obtenidos correctamente",
     "data": [
@@ -131,7 +131,7 @@ Authorization: Bearer <token>
       }
     ]
   }
-  ```
+  
 - **Códigos de respuesta**:
   - `200 OK`: Respuesta exitosa
   - `401 Unauthorized`: No autenticado
@@ -144,7 +144,7 @@ Authorization: Bearer <token>
 - **Parámetros de ruta**:
   - `id`: ID del docente
 - **Respuesta exitosa**:
-  ```json
+  json
   {
     "message": "Docente obtenido correctamente",
     "data": {
@@ -158,7 +158,7 @@ Authorization: Bearer <token>
       "updatedAt": "date"
     }
   }
-  ```
+  
 - **Códigos de respuesta**:
   - `200 OK`: Respuesta exitosa
   - `401 Unauthorized`: No autenticado
@@ -170,7 +170,7 @@ Authorization: Bearer <token>
 - **Método**: `POST`
 - **Autenticación**: Requerida
 - **Parámetros de cuerpo**:
-  ```json
+  json
   {
     "usuario": "string",
     "contrasena": "string",
@@ -178,9 +178,9 @@ Authorization: Bearer <token>
     "apellido": "string",
     "email": "string"
   }
-  ```
+  
 - **Respuesta exitosa**:
-  ```json
+  json
   {
     "message": "Docente creado correctamente",
     "data": {
@@ -194,7 +194,7 @@ Authorization: Bearer <token>
       "updatedAt": "date"
     }
   }
-  ```
+  
 - **Códigos de respuesta**:
   - `201 Created`: Docente creado
   - `400 Bad Request`: Datos inválidos o usuario/email ya existe
@@ -208,16 +208,16 @@ Authorization: Bearer <token>
 - **Parámetros de ruta**:
   - `id`: ID del docente
 - **Parámetros de cuerpo** (todos opcionales):
-  ```json
+  json
   {
     "nombre": "string",
     "apellido": "string",
     "email": "string",
     "contrasena": "string"
   }
-  ```
+  
 - **Respuesta exitosa**:
-  ```json
+  json
   {
     "message": "Docente actualizado correctamente",
     "data": {
@@ -231,7 +231,7 @@ Authorization: Bearer <token>
       "updatedAt": "date"
     }
   }
-  ```
+  
 - **Códigos de respuesta**:
   - `200 OK`: Docente actualizado
   - `401 Unauthorized`: No autenticado
@@ -245,11 +245,11 @@ Authorization: Bearer <token>
 - **Parámetros de ruta**:
   - `id`: ID del docente
 - **Respuesta exitosa**:
-  ```json
+  json
   {
     "message": "Docente desactivado correctamente"
   }
-  ```
+  
 - **Códigos de respuesta**:
   - `200 OK`: Docente desactivado
   - `401 Unauthorized`: No autenticado
@@ -259,7 +259,7 @@ Authorization: Bearer <token>
 ## Modelos de datos
 
 ### Docente
-```json
+json
 {
   "id_docente": "number (clave primaria, autoincremental)",
   "usuario": "string (único)",
@@ -271,10 +271,10 @@ Authorization: Bearer <token>
   "createdAt": "date",
   "updatedAt": "date"
 }
-```
+
 
 ### Clase
-```json
+json
 {
   "id_clase": "number (clave primaria, autoincremental)",
   "id_docente": "number (clave foránea → Docente.id_docente)",
@@ -287,10 +287,10 @@ Authorization: Bearer <token>
   "createdAt": "date",
   "updatedAt": "date"
 }
-```
+
 
 ### Asistencia
-```json
+json
 {
   "id_asistencia": "number (clave primaria, autoincremental)",
   "id_clase": "number (clave foránea → Clase.id_clase)",
@@ -305,7 +305,7 @@ Authorization: Bearer <token>
   "createdAt": "date",
   "updatedAt": "date"
 }
-```
+
 
 ## Notas sobre validación de datos
 

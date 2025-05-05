@@ -37,7 +37,7 @@ El proyecto consiste en desarrollar una aplicación web que permita a docentes g
 ## 🚀 Escalabilidad
 
 - Backend desacoplado utilizando Node.js y Express.
-- Base de datos relacional escalable (MySQL o PostgreSQL).
+- Base de datos relacional escalable (MySQL).
 - Posibilidad de extender a múltiples docentes y clases concurrentes.
 - Organización modular del frontend (React).
 
